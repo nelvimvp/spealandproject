@@ -15,6 +15,7 @@ Global css
   --clr-primary-1: rgb(228, 252, 120);
   /* primary/main color */
   --clr-primary-5: rgb(178, 221, 22);
+  --clr-primary-5: red;
   /*  shades of primary color */
   --clr-primary-6: rgb(178, 221, 22);
   --clr-primary-7: rgb(169, 172, 154);
