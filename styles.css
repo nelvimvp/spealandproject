@@ -189,6 +189,17 @@ Global classes
 Animation
 ~~~~~ 
 */
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes bounce {
   0% {
     transform: scale(1);
@@ -198,6 +209,24 @@ Animation
   }
   100% {
     transform: scale(1);
+  }
+}
+@-webkit-keyframes slidefromright {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(400px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-400px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 @keyframes slidefromright {
@@ -211,6 +240,24 @@ Animation
   }
   75% {
     transform: translateX(-400px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slidefromleft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-400px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(400px);
     opacity: 0.75;
   }
   100% {
@@ -233,6 +280,20 @@ Animation
   }
   100% {
     transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
   }
 }
@@ -269,6 +330,7 @@ Navbutton
   color: var(--clr-primary-9);
   cursor: pointer;
   /* animation */
+  -webkit-animation: bounce 3s ease infinite;
   animation: bounce 3s ease infinite;
 }
 /*
@@ -354,6 +416,7 @@ Header
   text-transform: uppercase;
   font-weight: 1;
   /* animation */
+  -webkit-animation: slidefromleft 5s ease-in-out 1;
   animation: slidefromleft 5s ease-in-out 1;
 }
 .banner h2 {
@@ -363,6 +426,7 @@ Header
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
   /* animation */
+  -webkit-animation: slidefromright 5s ease-in-out 1;
   animation: slidefromright 5s ease-in-out 1;
 }
 .banner h1 span {
@@ -380,6 +444,7 @@ Header
   outline: 0.2rem solid var(--clr-primary-1);
   outline-offset: 0.4rem;
   /* animation */
+  -webkit-animation: show 5s linear 1;
   animation: show 5s linear 1;
 }
 /*
@@ -419,6 +484,7 @@ Languages
 }
 .language-img {
   height: 8rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .language-info h4 {
@@ -668,6 +734,30 @@ CONTACTS
   border-radius: var(--radius);
   letter-spacing: var(--spacing);
 }
+.form-control::-webkit-input-placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.form-control::-moz-placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.form-control:-ms-input-placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+.form-control::-ms-input-placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-grey-1);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
 .form-control::placeholder {
   font-family: var(--ff-primary);
   color: var(--clr-grey-1);
@@ -790,6 +880,7 @@ EXPLORE
   margin-top: 0.8rem;
   margin-bottom: 0.8rem;
   /* animation */
+  -webkit-animation: slidefromleft 3s linear 1;
   animation: slidefromleft 3s linear 1;
 }
 @media screen and (min-width: 999px) {
